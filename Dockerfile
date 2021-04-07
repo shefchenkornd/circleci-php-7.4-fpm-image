@@ -1,6 +1,8 @@
 FROM circleci/php:7.4-fpm
 
-RUN apt-get update
+USER root
+
+RUN apt-get update && apt-get install --assume-yes zlib1g-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 
 RUN docker-php-ext-install exif
 RUN docker-php-ext-configure exif \
