@@ -1,7 +1,5 @@
 FROM circleci/php:7.4-fpm
 
-ADD deployment/configs/common/php-fpm/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
-
 RUN apt-get update && apt-get install --assume-yes zlib1g-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 
 RUN docker-php-ext-install exif
