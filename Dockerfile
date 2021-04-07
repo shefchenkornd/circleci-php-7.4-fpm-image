@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM circleci/php:7.4-fpm
 
 ADD deployment/configs/common/php-fpm/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
